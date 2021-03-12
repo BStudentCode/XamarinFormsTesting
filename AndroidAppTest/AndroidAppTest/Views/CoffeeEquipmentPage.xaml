@@ -11,51 +11,22 @@
         </StackLayout>-->
 
         <!--How many entries defines how many rows. * = big as possible, auto = small as it needs to be to fit its element inside-->
-        <!--"<Grid RowDefinitions="*,Auto,Auto,*">
-            <StackLayout Background="red">
+        <Grid RowDefinitions="*,Auto,Auto,*">
+            <StackLayout Background="red"> <!--StackLayout has Orientation property that can be horizontal or vertical-->
                 <Label Text="Layout within a layout"/>
                 <Label Text="Layout within a layout" HorizontalOptions="Center"/>
                 <Label Text="Layout within a layout" HorizontalOptions="End"/>
             </StackLayout>
-            
+            <!--x: is extension within xaml-->
             <Label
+                x:Name="LabelCount" 
                 Grid.Row="1"
                 HorizontalOptions="Center"
                 Text="Hello World"/>
-            <Button Grid.Row="2"></Button>
-        </Grid>-->
-
-
-        <Grid BackgroundColor="Black">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-            </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-            </Grid.ColumnDefinitions>
-            <BoxView Grid.Row="0" Grid.Column="0" BackgroundColor="White" />
-            <Label Text="1" Grid.Row="0" Grid.Column="0" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
-            <BoxView Grid.Row="0" Grid.Column="1" BackgroundColor="White" />
-            <Label Text="2" Grid.Row="0" Grid.Column="1" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
-            <BoxView Grid.Row="0" Grid.Column="2" BackgroundColor="White" />
-            <Label Text="3" Grid.Row="0" Grid.Column="2" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
-            <BoxView Grid.Row="1" Grid.Column="0" BackgroundColor="White" />
-            <Label Text="4" Grid.Row="1" Grid.Column="0" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
-            <BoxView Grid.Row="1" Grid.Column="1" BackgroundColor="White" />
-            <Label Text="5" Grid.Row="1" Grid.Column="1" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
-            <BoxView Grid.Row="1" Grid.Column="2" BackgroundColor="White" />
-            <Label Text="6" Grid.Row="1" Grid.Column="2" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
-            <BoxView Grid.Row="2" Grid.Column="0" BackgroundColor="White" />
-            <Label Text="7" Grid.Row="2" Grid.Column="0" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
-            <BoxView Grid.Row="2" Grid.Column="1" BackgroundColor="White" />
-            <Label Text="8" Grid.Row="2" Grid.Column="1" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
-            <BoxView Grid.Row="2" Grid.Column="2" BackgroundColor="White" />
-            <Label Text="9" Grid.Row="2" Grid.Column="2" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+            
+            <Button x:Name="ButtonClick" Clicked="ButtonClick_Clicked" Grid.Row="2" Text="Click me!"/>
         </Grid>
+
 
     </ContentPage.Content>
 </ContentPage>
