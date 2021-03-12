@@ -1,8 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:viewmodels="clr-namespace:AndroidAppTest.ViewModels"
              x:Class="AndroidAppTest.Views.CoffeeEquipmentPage"
-             BackgroundColor="white">
+             BackgroundColor="white"
+             x:DataType="viewmodels:CoffeeEquipmentViewModel"
+             >
+    
+    <ContentPage.BindingContext>
+        <viewmodels:CoffeeEquipmentViewModel/>
+    </ContentPage.BindingContext> <!--get methods from viewmodel-->
+        
     <ContentPage.Content>
         <!--<StackLayout>
             <Label Text="Hello World!"
@@ -18,13 +26,15 @@
                 <Label Text="Layout within a layout" HorizontalOptions="End"/>
             </StackLayout>
             <!--x: is extension within xaml-->
+            <!--<Entry Text="{Binding CountDisplay}"/>
+            //Can update data both ways-->
             <Label
                 x:Name="LabelCount" 
                 Grid.Row="1"
                 HorizontalOptions="Center"
-                Text="Hello World"/>
+                Text="{Binding CountDisplay}" FontSize="24"/>
             
-            <Button x:Name="ButtonClick" Clicked="ButtonClick_Clicked" Grid.Row="2" Text="Click me!"/>
+            <Button Command="{Binding IncreaseCount}" Grid.Row="2" Text="Click me!" FontSize="25"/> <!--Can use x:Name and Clicked property and refer to method in codebehind, or use Command to target a method without need for x:Name-->
         </Grid>
 
 
