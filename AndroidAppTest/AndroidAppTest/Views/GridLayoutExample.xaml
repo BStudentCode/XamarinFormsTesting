@@ -1,31 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="AndroidAppTest.Views.CoffeeEquipmentPage"
-             BackgroundColor="white">
+             x:Class="AndroidAppTest.Views.GridLayoutExample">
     <ContentPage.Content>
-        <!--<StackLayout>
-            <Label Text="Hello World!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>-->
-
-        <!--How many entries defines how many rows. * = big as possible, auto = small as it needs to be to fit its element inside-->
-        <!--"<Grid RowDefinitions="*,Auto,Auto,*">
-            <StackLayout Background="red">
-                <Label Text="Layout within a layout"/>
-                <Label Text="Layout within a layout" HorizontalOptions="Center"/>
-                <Label Text="Layout within a layout" HorizontalOptions="End"/>
-            </StackLayout>
-            
-            <Label
-                Grid.Row="1"
-                HorizontalOptions="Center"
-                Text="Hello World"/>
-            <Button Grid.Row="2"></Button>
-        </Grid>-->
-
-
         <Grid BackgroundColor="Black">
             <Grid.RowDefinitions>
                 <RowDefinition Height="*"/>
@@ -56,6 +33,5 @@
             <BoxView Grid.Row="2" Grid.Column="2" BackgroundColor="White" />
             <Label Text="9" Grid.Row="2" Grid.Column="2" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
         </Grid>
-
     </ContentPage.Content>
 </ContentPage>
